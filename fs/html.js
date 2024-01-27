@@ -22,6 +22,7 @@ server.listen(port, host, ()=>{
     console.log(`Server Running at: ${url}.`)
 })
 
-const start = (process.platform == 'darwin' ? 'open':process.platform == 'win31'?'start':'xdg-open')
+const start = (process.platform == 'darwin' ? 'open':
+process.platform == 'win31'?'start':'xdg-open')
 
 require('child_process').exec(start + ' ' + url)
